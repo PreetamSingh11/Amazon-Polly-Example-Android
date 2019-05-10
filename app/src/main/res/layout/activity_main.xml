@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    tools:context=".MainActivity">
+
+    <Spinner
+        android:id="@+id/spinner_voice_list"
+        style="@android:style/Widget.Spinner"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/edit_text" />
+
+    <EditText
+        android:id="@+id/edit_text"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:layout_centerInParent="true"
+        android:background="@drawable/edit_text_border"
+        android:gravity="top"
+        android:hint="@string/edit_text_hint"
+        android:inputType="textCapSentences|textMultiLine"
+        android:padding="10dp"
+        android:scrollbars="vertical"
+        tools:ignore="Autofill" />
+
+    <LinearLayout
+        android:id="@+id/bottom_btn_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/edit_text"
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal"
+        android:weightSum="3">
+
+        <Button
+            android:id="@+id/btn_clear"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:elevation="6dp"
+            android:text="@string/btn_clear_text"
+            android:textAllCaps="false"
+            tools:ignore="ButtonStyle" />
+
+        <Button
+            android:id="@+id/listen"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:elevation="6dp"
+            android:text="@string/btn_listen_text"
+            android:textAllCaps="false"
+            tools:ignore="ButtonStyle" />
+
+        <Button
+            android:id="@+id/btn_download"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:elevation="6dp"
+            android:text="@string/text_download"
+            android:textAllCaps="false"
+            tools:ignore="ButtonStyle" />
+
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/image_polly"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:layout_centerInParent="true"
+        android:alpha=".15"
+        android:contentDescription="@string/polly_logo"
+        android:src="@drawable/amazon_polly" />
+
+    <ProgressBar
+        android:id="@+id/progress_bar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true" />
+
+    <ImageView
+        android:id="@+id/audio_sign"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_centerInParent="true"
+        android:layout_above="@id/spinner_voice_list"
+        android:layout_marginBottom="50dp"
+        android:contentDescription="@string/audio_image"
+        android:src="@drawable/audio" />
+
+    <TextView
+        android:id="@+id/text_audio_info"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toEndOf="@id/spinner_voice_list"
+        android:layout_above="@id/edit_text"
+        android:layout_marginBottom="10dp"
+        android:layout_marginStart="6dp"
+        android:textSize="16sp"
+        android:textStyle="bold" />
+
+    <ImageView
+        android:id="@+id/download_sign"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_centerInParent="true"
+        android:layout_above="@id/text_download_info"
+        android:contentDescription="@string/audio_image"
+        android:src="@drawable/download" />
+
+    <TextView
+        android:id="@+id/text_download_info"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/spinner_voice_list"
+        android:layout_marginBottom="50dp"
+        android:layout_centerInParent="true" />
+
+    <RelativeLayout
+        android:id="@+id/network_status"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/no_network_img"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_centerInParent="true"
+            android:contentDescription="@string/no_internet_img"
+            android:src="@drawable/no_internet" />
+
+        <TextView
+            android:id="@+id/no_network_info"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/no_network_img"
+            android:layout_centerInParent="true"
+            android:layout_marginTop="10dp"
+            android:text="@string/no_internet_text" />
+
+        <Button
+            android:id="@+id/btn_try_again"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/no_network_info"
+            android:layout_centerInParent="true"
+            android:layout_marginTop="10dp"
+            android:text="@string/try_again_text"
+            android:textAllCaps="false" />
+
+    </RelativeLayout>
+
+</RelativeLayout>

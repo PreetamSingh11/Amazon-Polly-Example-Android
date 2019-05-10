@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">Text To Speech</string>
+    <string name="btn_listen_text">Listen</string>
+    <string name="edit_text_hint">Enter text here...</string>
+    <string name="text_download">Download</string>
+    <string name="btn_clear_text">Clear</string>
+    <string name="polly_logo">amazon polly logo</string>
+    <string name="audio_image">Audio Image</string>
+    <string name="no_internet_img">No Internet</string>
+    <string name="no_internet_text">Oops! No Internet Available....</string>
+    <string name="try_again_text">Try Again</string>
+</resources>
